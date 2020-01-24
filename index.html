@@ -127,7 +127,7 @@
     </svg>
     Meetup
     <br /><br /><br />
-    Febraury {rand.dateFormat} 2020, 7pm—9pm
+    <span id="date"></span> 2020, 7pm—9pm
     <br />
     Short talks and workshops
     <br /><br />
@@ -183,21 +183,35 @@
     Bring a laptop, a friend, some paper
     <script>
       window.onload = function(tor) {
-        const open = document.getElementById("open");
-        const openl = document.getElementById("openl");
-        const rsvp = document.getElementById("rsvp");
-        const rsvpl = document.getElementById("rsvpl");
-        open.onmouseover = function() {
+        function date() {
+          const d = document.getElementById("date");
+          function r(x) {
+            return Math.floor(Math.random() * Math.floor(x));
+          }
+          const leap = r(4);
+          if (leap === 0) {
+            d.innerHTML = "Leap Day";
+          } else {
+            d.innerHTML = "February 29";
+          }
+        }
+        date();
+
+        const o = document.getElementById("open");
+        const ol = document.getElementById("openl");
+        const r = document.getElementById("rsvp");
+        const rl = document.getElementById("rsvpl");
+        o.onmouseover = function() {
           openl.style.display = "block";
         };
-        open.onmouseout = function() {
-          openl.style.display = "none";
+        o.onmouseout = function() {
+          ol.style.display = "none";
         };
-        rsvp.onmouseover = function() {
-          rsvpl.style.display = "block";
+        r.onmouseover = function() {
+          rl.style.display = "block";
         };
-        rsvp.onmouseout = function() {
-          rsvpl.style.display = "none";
+        r.onmouseout = function() {
+          rl.style.display = "none";
         };
       };
     </script>

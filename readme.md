@@ -3,5 +3,5 @@ toronto-arena.now.sh
 
 to-do
 
-- [ ] rand date format
+- [x] rand date format
 - [ ] minify
