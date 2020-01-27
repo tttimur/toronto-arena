@@ -8,6 +8,7 @@
       * {
         margin: 0;
         padding: 0;
+box-sizing: border-box;
       }
       body {
         -webkit-font-smoothing: antialiased;
@@ -25,7 +26,7 @@
         text-decoration: none;
       }
       html {
-        font-size: 14px;
+        font-size: 17px;
         padding: 1.11rem;
       }
       svg {
@@ -42,12 +43,15 @@
         border: 0.142857143rem solid #c1e9bf;
         margin-right: 1rem;
       }
+
       .block:first-of-type {
-        transform: translateY(-0.56rem);
+        //transform: translateY(-0.56rem);
       }
+
       .block:hover {
         border: 0.142857143rem solid #17ac10;
       }
+
       .block-container {
         width: 100%;
         height: 100%;
@@ -74,12 +78,11 @@
         width: 11.428571429rem;
       }
       .channel {
-        margin: 1.56rem 0 1rem;
-        font-size: 1.2rem;
+        margin-bottom: 0.56rem
       }
-      .user {
-        font-size: 0.86rem;
-        letter-spacing: 0.05em;
+      .user, .visit {
+        font-size: 0.76rem;
+        letter-spacing: 0.02em
       }
       a:hover .link{display: block}
       .link {
@@ -97,26 +100,42 @@
       }
       .visit {
         position: absolute;
+        left: 50%; transform: translateX(-50%);
         bottom: 0;
-        width: 86%;
-        margin-left: 3.5%;
+        width: calc(100% - 1rem);
         padding: 0.5rem;
         border-top: 0.071428572rem solid #17ac10;
-        font-size: 0.714285714rem;
+      }
+      p{margin-top: 0; margin-bottom: 0.15rem}
+      .feed a {vertical-align: middle}
+      .feed{padding: 1.5rem 0}
+      a{color: inherit;}
+      @media (max-width: 600px) {
+        .block-container {
+          position: absolute;
+          top:0;left:0;
+        }
+        .feed a:first-child {margin-bottom: 1rem}
+        .block{
+          position: relative;
+          margin-right: 0;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%}
+        }
       }
     </style>
+
   </head>
   <body>
-    Toronto Are.na
+    <p><a href="https://are.na/toronto" target="_blank" rel="noopener noreferrer">Toronto Are.na
     <svg viewBox="0 0 17 10" fill="none">
       <path d="M16.836 7.007l-2.357-1.84c-.144-.113-.144-.298 0-.41l2.357-1.841c.145-.113.205-.303.134-.423-.07-.119-.268-.162-.438-.094l-2.803 1.11c-.17.068-.33-.025-.356-.206L12.95.329C12.925.148 12.79 0 12.647 0c-.141 0-.278.148-.303.329l-.422 2.974c-.026.18-.186.274-.356.206L8.81 2.417a.972.972 0 00-.62 0L5.433 3.51c-.17.068-.33-.025-.356-.206L4.656.329C4.63.148 4.493 0 4.352 0c-.142 0-.279.148-.304.329l-.422 2.974c-.025.18-.186.274-.356.206L.468 2.399c-.17-.068-.368-.025-.439.094-.07.12-.01.31.134.423l2.357 1.84c.144.113.144.298 0 .41L.163 7.007c-.145.113-.205.315-.134.448.07.134.268.188.438.12l2.777-1.109c.171-.068.33.024.354.205l.4 3c.025.181.183.329.353.329.17 0 .329-.148.353-.329l.401-3c.024-.18.183-.273.353-.205l2.732 1.09c.17.068.449.068.619 0l2.731-1.09c.17-.068.33.024.353.205l.402 3c.024.181.182.329.352.329.17 0 .328-.148.352-.329l.402-3c.024-.18.183-.273.353-.205l2.778 1.109c.17.068.367.014.438-.12.07-.133.01-.335-.134-.447zM10.84 5.19L8.764 6.778a.46.46 0 01-.528 0L6.16 5.19c-.146-.112-.147-.295-.003-.408l2.08-1.628a.448.448 0 01.525 0l2.08 1.628c.144.113.143.296-.003.408z" fill="#000"></path>
     </svg>
-    Meetup
-    <br><br>
-    February {{.Response}} 2020, 7pm—9pm
+    Meetup</a></p>
     <br>
-    Short talks and workshops
-    <br><br>
+    <p>February {{.Response}} 2020, 7pm—9pm</p>
+    <p>Short talks and workshops</p>
     <div class="feed">
       <a target="_blank" rel="noopener noreferrer" href="https://www.are.na/toronto/open-call-for-speakers-workshops" class="block" id="open">
         <div class="link" id="openl">
@@ -153,10 +172,9 @@
         </div>
       </a>
     </div>
-    <br>
-    @ 56
-    <br>
-    205–25 Liberty St.
-    <br><br>
-    Bring a laptop, a friend, some paper
+    <p>
+    @ 56</p>
+    <p>205–25 Liberty St.</p>
+    <br/>
+    <p>Bring a laptop, a friend, some paper</p>
 </body></html>
