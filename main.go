@@ -4,6 +4,7 @@ import (
   "net/http"
   "html/template"
   "math/rand"
+  "os"
 )
 
 type Date struct {
@@ -29,8 +30,7 @@ func s (w http.ResponseWriter, r *http.Request) {
 }
 
 func main () {
-  //port := os.Getenv("port")
-  port := "3000"
+  port := os.Getenv("port")
   http.HandleFunc("/", s)
   http.ListenAndServe(":"+port, nil)
 }
