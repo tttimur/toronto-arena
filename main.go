@@ -16,7 +16,7 @@ func getLeapYear () string {
   // get random number between 1 - 4
   r := rand.Intn(5 - 1) + 1
   if r % 4 == 0 {
-    response = "Leap Year"
+    response = "Leap Day"
   } else {
     response = "29"
   }
