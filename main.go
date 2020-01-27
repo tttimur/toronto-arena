@@ -14,7 +14,7 @@ type Date struct {
 func getLeapYear () string {
   var response string
   // get random number between 1 - 4
-  r := rand.Intn(5 - 1) + 1
+  r := rand.Intn(5)
   if r % 4 == 0 {
     response = "Leap Day"
   } else {
