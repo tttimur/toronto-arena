@@ -30,7 +30,7 @@ func s (w http.ResponseWriter, r *http.Request) {
 }
 
 func main () {
-  port := os.Getenv("port")
+  port := os.Getenv("PORT")
   http.HandleFunc("/", s)
   http.ListenAndServe(":"+port, nil)
 }
