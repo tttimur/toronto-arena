@@ -1,0 +1,17 @@
+Are.na Toronto meetup mini-server built with go.
+
+Purpose of this site is to leverage server-side functionality
+in place of front-end func with javascript. specifically 
+rendering "29" or "Leap Day" in the description. "Leap Day"
+has a 1 in 4 chance of being called.
+
+In order to run
+$ PORT=3000 go run main.go
+then make a request to localhost:3000
+
+Initial setup for heroku
+$ govendor init 
+$ git init; git add .; git commit -m "init";
+$ heroku create to-arena
+$ git push heroku master
+
