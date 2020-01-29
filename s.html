@@ -129,10 +129,11 @@
               width: 11.428571429rem;
             }
             .channel {
-              margin-bottom: 0.56rem
+              font-size: 1.2rem;
+              margin-bottom: 0.342rem
             }
             .user, .visit {
-              font-size: 0.76rem;
+              font-size: 0.86rem;
               letter-spacing: 0.02em
             }
             a:hover .link{display: block}
@@ -161,6 +162,15 @@
             .feed a {vertical-align: middle}
             .feed{padding: 1.5rem 0}
             a{color: inherit;}
+
+            @media (prefers-color-scheme: dark) {
+              body {
+                background-color: #111;
+                color: #fff;
+              }
+              svg path{fill: #fff}
+            }
+
             @media (max-width: 800px) {
               .block{height: 13rem; width: 13rem}
             }
@@ -193,9 +203,21 @@
         Meetup</a
       >
     </p>
-    <br />
-    <p>February {{.Response}} 2020, 7pm—9pm</p>
     <p>Short talks and workshops</p>
+    <br />
+    <p>February {{.Response}} 2020, 7pm to 9pm</p>
+    <br/>
+    <p>
+      Hosted at <a target="_blank" rel="noopener noreferrer" href="https://56.digital">56</a>
+      <a
+        href="https://goo.gl/maps/DRyZKy7HZC6WuMxE7"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+      <br />
+        205–25 Liberty St.</a
+      >
+    </p>
     <div class="feed">
       <a
         target="_blank"
@@ -250,15 +272,5 @@
         </div>
       </a>
     </div>
-    <p></p>
-    <p>
-      <a
-        href="https://www.openstreetmap.org/node/803203011"
-        target="_blank"
-        rel="noopener noreferrer"
-        >@ 56 <br />
-        205–25 Liberty St.</a
-      >
-    </p>
   </body>
 </html>
