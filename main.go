@@ -35,8 +35,13 @@ func main () {
   if port == "" {
     port = "3000"
   }
-  http.HandleFunc("/", s)
 
-  http.ListenAndServe(":"+port, nil)
+  mux := http.NewServeMux()
+  mux.HandleFunc("/", s)
+
+  staticFiles:= http.FileServer(http.Dir("./static"))
+  mux.Handle("/static/", http.StripPrefix("/static", staticFiles))
+
+  http.ListenAndServe(":"+port, mux)
 }
 
