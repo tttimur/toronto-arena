@@ -1,3 +1,7 @@
+this repo will deploy on master push to:
+https://arena.meetup.to
+https://toronto-arena.herokuapp.com
+
 Are.na Toronto meetup mini-server built with go.
 
 Purpose of this site is to leverage server-side functionality
