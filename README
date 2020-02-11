@@ -11,8 +11,7 @@ Purpose of this site is to leverage server-side functionality
 in place of front-end func with javascript. specifically 
 rendering "29" or "Leap Day" in the description. "Leap Day"
 has a 1 in 4 chance of being called.
-note: THIS IS NOT TRUE ON THIS
-BRANCH LOL 😔
+note: THIS IS NOT TRUE ON THIS BRANCH LOL 😔
 
 In order to run
 $ now dev
