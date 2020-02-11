@@ -206,6 +206,14 @@
         }
       }
     </style>
+    <script>
+      fetch("/api")
+        .then(response => response.text())
+        .then(leap => {
+          document.getElementById("date").textContent = leap;
+          console.log(leap);
+        });
+    </script>
   </head>
   <body>
     <p>
@@ -222,7 +230,7 @@
     </p>
     <p>Short talks and workshops</p>
     <br />
-    <p>February {{.Response}} 2020, 7pm to 9pm</p>
+    <p>February <span id="date">29</span> 2020, 7pm to 9pm</p>
     <br />
     <p>
       Hosted at

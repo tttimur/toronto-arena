@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "arena-toronto",
+  "scope": "for-us-and-for-others",
+  "builds": [
+    { "src": "api/index.go", "use": "@now/go" },
+    { "src": "notes/**/*", "use": "@now/static" },
+    { "src": "static/**/*", "use": "@now/static" },
+    { "src": "vendor/**/*", "use": "@now/static" },
+    { "src": "index.html", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/api", "dest": "api/index.go" },
+    { "src": "/(notes|static|vendor)/(.*)" },
+    { "src": "/ta", "dest": "notes/ta.html" },
+    { "src": "/ac", "dest": "notes/ac.html" },
+    { "src": "/(.*)", "dest": "index.html" }
+  ],
+  "github": {
+    "enabled": false,
+    "silent": true
+  }
+}
