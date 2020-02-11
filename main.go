@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-type Date struct {
+type date struct {
 	Response string
 }
 
@@ -26,7 +26,7 @@ func getLeapYear() string {
 
 func s(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("s.html")
-	d := Date{Response: getLeapYear()}
+	d := date{Response: getLeapYear()}
 	t.Execute(w, d)
 }
 
