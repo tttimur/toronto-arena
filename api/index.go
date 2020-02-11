@@ -23,6 +23,7 @@ func getLeapYear() string {
 	return response
 }
 
+// Handler returns getLeapYear() response
 func Handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, getLeapYear())
 }
