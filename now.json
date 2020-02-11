@@ -10,7 +10,11 @@
     { "src": "/api", "dest": "api/index.go" },
     { "src": "/ta", "dest": "www/ta.html" },
     { "src": "/ac", "dest": "www/ac.html" },
-    { "src": "/static/(.*)", "dest": "www/static/$1" },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=604800" },
+      "dest": "www/static/$1"
+    },
     { "src": "/(.*)", "dest": "www/index.html" }
   ],
   "github": {
