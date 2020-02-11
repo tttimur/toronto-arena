@@ -35,6 +35,11 @@ func ta(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, r)
 }
 
+func ac(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles("ac.html")
+	t.Execute(w, r)
+}
+
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -43,6 +48,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/ta", ta)
+	mux.HandleFunc("/ac", ac)
 	mux.HandleFunc("/", s)
 
 	staticFiles := http.FileServer(http.Dir("./static"))
