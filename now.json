@@ -4,17 +4,14 @@
   "scope": "4-us-and-4-others",
   "builds": [
     { "src": "api/index.go", "use": "@now/go" },
-    { "src": "notes/**/*", "use": "@now/static" },
-    { "src": "static/**/*", "use": "@now/static" },
-    { "src": "vendor/**/*", "use": "@now/static" },
-    { "src": "index.html", "use": "@now/static" }
+    { "src": "www/**/*", "use": "@now/static" }
   ],
   "routes": [
     { "src": "/api", "dest": "api/index.go" },
-    { "src": "/(notes|static|vendor)/(.*)" },
-    { "src": "/ta", "dest": "notes/ta.html" },
-    { "src": "/ac", "dest": "notes/ac.html" },
-    { "src": "/(.*)", "dest": "index.html" }
+    { "src": "/ta", "dest": "www/ta.html" },
+    { "src": "/ac", "dest": "www/ac.html" },
+    { "src": "/static/(.*)", "dest": "www/static/$1" },
+    { "src": "/(.*)", "dest": "www/index.html" }
   ],
   "github": {
     "enabled": false,

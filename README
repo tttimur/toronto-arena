@@ -2,21 +2,23 @@ this repo will deploy on master push to:
 https://arena.meetup.to
 https://toronto-arena.herokuapp.com
 
+this branch deploys to:
+https://toronto-arena.now.sh
+
 Are.na Toronto meetup mini-server built with go.
 
 Purpose of this site is to leverage server-side functionality
 in place of front-end func with javascript. specifically 
 rendering "29" or "Leap Day" in the description. "Leap Day"
-has a 1 in 4 chance of being called. (THIS IS NOT TRUE ON THIS
-BRANCH LOL 😔)
+has a 1 in 4 chance of being called.
+note: THIS IS NOT TRUE ON THIS
+BRANCH LOL 😔
 
 In order to run
 $ now dev
 then make a request to localhost:3000
 
-Initial setup for heroku
-$ govendor init 
-$ git init; git add .; git commit -m "init";
-$ heroku create to-arena
-$ git push heroku master
-
+Deploy
+$ now  # staging
+$ now --prod  # prod
+note: should just link to github if we wanted to use
