@@ -56,138 +56,155 @@
       content="https://arena.meetup.to/static/arena.jpg"
     />
     <style>
-            * {
-              margin: 0;
-              padding: 0;
-      box-sizing: border-box;
-            }
-            body {
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
-              -moz-font-feature-settings:"kern" 1;
-              -ms-font-feature-settings:"kern" 1;
-              -o-font-feature-settings:"kern" 1;
-              -webkit-font-feature-settings:"kern" 1;
-              font-feature-settings:"kern" 1;
-              font-kerning: normal;
-              letter-spacing: 0.02em;
-            }
-            a {
-              text-decoration: none;
-            }
-            html {
-              font-size: 17px;
-              padding: 1.11rem;
-            }
-            svg {
-              display: inline-block;
-              height: 0.8rem;
-              margin: 0 0.3rem;
-            }
-            .block {
-              display: inline-block;
-              position: relative;
-              width: 19.714285714rem;
-              height: 19.714285714rem;
-              color: #17ac10;
-              border: 0.142857143rem solid #c1e9bf;
-              margin-right: 1rem;
-            }
+        -moz-font-feature-settings: "kern" 1;
+        -ms-font-feature-settings: "kern" 1;
+        -o-font-feature-settings: "kern" 1;
+        -webkit-font-feature-settings: "kern" 1;
+        font-feature-settings: "kern" 1;
+        font-kerning: normal;
+        letter-spacing: 0.02em;
+      }
+      a {
+        text-decoration: none;
+      }
+      html {
+        font-size: 17px;
+        padding: 1.11rem;
+      }
+      svg {
+        display: inline-block;
+        height: 0.8rem;
+        margin: 0 0.3rem;
+      }
+      .block {
+        display: inline-block;
+        position: relative;
+        width: 19.714285714rem;
+        height: 19.714285714rem;
+        color: #17ac10;
+        border: 0.142857143rem solid #c1e9bf;
+        margin-right: 1rem;
+      }
 
-            .block:first-of-type {
-              //transform: translateY(-0.56rem);
-            }
+      .block:hover {
+        border: 0.142857143rem solid #17ac10;
+      }
 
-            .block:hover {
-              border: 0.142857143rem solid #17ac10;
-            }
+      .block-container {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+      .channel,
+      .user {
+        width: 11.428571429rem;
+      }
+      .channel {
+        font-size: 1.2rem;
+        margin-bottom: 0.342rem;
+      }
+      .user,
+      .visit {
+        font-size: 0.86rem;
+        letter-spacing: 0.02em;
+      }
+      a:hover .link {
+        display: block;
+      }
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .link-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .visit {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: calc(100% - 1rem);
+        padding: 0.5rem;
+        border-top: 2px solid #17ac10;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0.15rem;
+      }
+      .feed a {
+        vertical-align: middle;
+      }
+      .feed {
+        padding: 1.5rem 0;
+      }
+      a {
+        color: inherit;
+      }
 
-            .block-container {
-              width: 100%;
-              height: 100%;
-              display: -webkit-box;
-              display: -moz-box;
-              display: -ms-flexbox;
-              display: -webkit-flex;
-              display: flex;
-              -webkit-box-align: center;
-              -moz-box-align: center;
-              -ms-flex-align: center;
-              -webkit-align-items: center;
-              align-items: center;
-              -webkit-box-pack: center;
-              -moz-box-pack: center;
-              -ms-flex-pack: center;
-              -webkit-justify-content: center;
-              justify-content: center;
-              -webkit-flex-direction: column;
-              flex-direction: column;
-            }
-            .channel,
-            .user {
-              width: 11.428571429rem;
-            }
-            .channel {
-              font-size: 1.2rem;
-              margin-bottom: 0.342rem
-            }
-            .user, .visit {
-              font-size: 0.86rem;
-              letter-spacing: 0.02em
-            }
-            a:hover .link{display: block}
-            .link {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              display: none;
-            }
-            .link-container {
-              position: relative;
-              width: 100%;
-              height: 100%;
-            }
-            .visit {
-              position: absolute;
-              left: 50%; transform: translateX(-50%);
-              bottom: 0;
-              width: calc(100% - 1rem);
-              padding: 0.5rem;
-              border-top: 2px solid #17ac10;
-            }
-            p{margin-top: 0; margin-bottom: 0.15rem}
-            .feed a {vertical-align: middle}
-            .feed{padding: 1.5rem 0}
-            a{color: inherit;}
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #111;
+          color: #fff;
+        }
+        svg path {
+          fill: #fff;
+        }
+      }
 
-            @media (prefers-color-scheme: dark) {
-              body {
-                background-color: #111;
-                color: #fff;
-              }
-              svg path{fill: #fff}
-            }
-
-            @media (max-width: 800px) {
-              .block{height: 13rem; width: 13rem}
-            }
-            @media (max-width: 600px) {
-              .block-container {
-                position: absolute;
-                top:0;left:0;
-              }
-              .feed a:first-child {margin-bottom: 1rem}
-              .block{
-                position: relative;
-                margin-right: 0;
-                width: 100%;
-                height: 0;
-                padding-bottom: 100%}
-              }
-            }
+      @media (max-width: 800px) {
+        .block {
+          height: 13rem;
+          width: 13rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .block-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .feed a:first-child {
+          margin-bottom: 1rem;
+        }
+        .block {
+          position: relative;
+          margin-right: 0;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -206,15 +223,18 @@
     <p>Short talks and workshops</p>
     <br />
     <p>February {{.Response}} 2020, 7pm to 9pm</p>
-    <br/>
+    <br />
     <p>
-      Hosted at <a target="_blank" rel="noopener noreferrer" href="https://56.digital">56</a>
+      Hosted at
+      <a target="_blank" rel="noopener noreferrer" href="https://56.digital"
+        >56</a
+      >
       <a
         href="https://goo.gl/maps/DRyZKy7HZC6WuMxE7"
         target="_blank"
         rel="noopener noreferrer"
-        >
-      <br />
+      >
+        <br />
         205–25 Liberty St.</a
       >
     </p>
