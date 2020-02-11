@@ -1,3 +1,4 @@
 *.swp
 main
 .DS_Store
+gin-bin

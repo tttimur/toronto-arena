@@ -11,6 +11,7 @@ has a 1 in 4 chance of being called.
 
 In order to run
 $ PORT=3000 go run main.go
+(or $ gin run main.go)
 then make a request to localhost:3000
 
 Initial setup for heroku
