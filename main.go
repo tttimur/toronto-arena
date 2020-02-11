@@ -31,12 +31,12 @@ func s(w http.ResponseWriter, r *http.Request) {
 }
 
 func ta(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("ta.html")
+	t, _ := template.ParseFiles("notes/ta.html")
 	t.Execute(w, r)
 }
 
 func ac(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("ac.html")
+	t, _ := template.ParseFiles("notes/ac.html")
 	t.Execute(w, r)
 }
 
