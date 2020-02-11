@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "arena-toronto",
-  "scope": "for-us-and-for-others",
+  "scope": "4-us-and-4-others",
   "builds": [
     { "src": "api/index.go", "use": "@now/go" },
     { "src": "notes/**/*", "use": "@now/static" },
