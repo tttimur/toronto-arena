@@ -19,7 +19,7 @@ func getLeapYear() string {
 	if r%4 == 0 {
 		response = "Leap Day"
 	} else {
-		response = "29"
+		response = "February 29"
 	}
 	return response
 }
