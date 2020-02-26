@@ -40,6 +40,11 @@ func ac(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, r)
 }
 
+func coc(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles("notes/coc.html")
+	t.Execute(w, r)
+}
+
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -49,6 +54,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/ta", ta)
 	mux.HandleFunc("/ac", ac)
+	mux.HandleFunc("/coc", coc)
 	mux.HandleFunc("/", s)
 
 	staticFiles := http.FileServer(http.Dir("./static"))
