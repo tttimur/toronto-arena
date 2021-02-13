@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/valyala/fasthttp"
 	"html/template"
 	"math/rand"
-	"net/http"
 	"os"
 )
 
@@ -24,25 +24,20 @@ func getLeapYear() string {
 	return response
 }
 
-func s(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("s.html")
-	d := date{Response: getLeapYear()}
-	t.Execute(w, d)
-}
+func getRoute(fileRoute string, d bool, ctx *fasthttp.RequestCtx) {
+	t, _ := template.ParseFiles(fileRoute)
 
-func ta(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("notes/ta.html")
-	t.Execute(w, r)
-}
+	// set content type, 200 status and caching for 50 seconds
+	ctx.SetContentType("text/html")
+	ctx.SetStatusCode(fasthttp.StatusOK)
+	ctx.Response.Header.Set("Cache-Control", "stale-while-revalidate=50")
 
-func ac(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("notes/ac.html")
-	t.Execute(w, r)
-}
-
-func coc(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("notes/coc.html")
-	t.Execute(w, r)
+	if d != false {
+		getDate := date{Response: getLeapYear()}
+		t.Execute(ctx, getDate)
+	} else {
+		t.Execute(ctx, nil)
+	}
 }
 
 func main() {
@@ -51,14 +46,33 @@ func main() {
 		port = "3000"
 	}
 
-	mux := http.NewServeMux()
-	mux.HandleFunc("/ta", ta)
-	mux.HandleFunc("/ac", ac)
-	mux.HandleFunc("/coc", coc)
-	mux.HandleFunc("/", s)
+	// super simple "mux" based on request route
+	m := func(ctx *fasthttp.RequestCtx) {
+		switch string(ctx.Path()) {
+		case "/ta":
+			getRoute("notes/ta.html", false, ctx)
+		case "/ac":
+			getRoute("notes/ac.html", false, ctx)
+		case "/coc":
+			getRoute("notes/coc.html", false, ctx)
+		case "/":
+			getRoute("s.html", true, ctx)
+		default:
+			ctx.Error("not found :p", fasthttp.StatusNotFound)
+		}
+	}
 
-	staticFiles := http.FileServer(http.Dir("./static"))
-	mux.Handle("/static/", http.StripPrefix("/static", staticFiles))
+	/*
+		mux := http.NewServeMux()
+		mux.HandleFunc("/ta", ta)
+		mux.HandleFunc("/ac", ac)
+		mux.HandleFunc("/coc", coc)
+		mux.HandleFunc("/", s)
 
-	http.ListenAndServe(":"+port, mux)
+		staticFiles := http.FileServer(http.Dir("./static"))
+		mux.Handle("/static/", http.StripPrefix("/static", staticFiles))
+
+		http.ListenAndServe(":"+port, mux)
+	*/
+	fasthttp.ListenAndServe(":"+port, m)
 }
