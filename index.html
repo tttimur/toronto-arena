@@ -1,11 +1,10 @@
 <!--
   +––––––––––––––––––––––––––––––––––––––––––––+
   |                                            |
-  |  February, 2020                            |
+  |  June 12, 2022                             |
   |                                            |
   |  Location:                                 |
-  |  56.digital                                |
-  |  201 - 35 Liberty St.                      |
+  |  Christie Pits                             |
   |                                            |
   |           +––––––––––––––––––––+           |
   |           |                    |           |
@@ -13,7 +12,7 @@
   |           |                    |           |
   |           +––––––––––––––––––––+           |
   |                                            |
-  |  7:00 to 9:00pm                            |
+  |                                            |
   |                                            |
   |  Short talks and workshops                 |
   |                                            |
@@ -21,17 +20,17 @@
   |                                            |
   +––––––––––––––––––––––––––––––––––––––––––––+
              Toronto Are.na Meetup
-                 February 2020
+                 February 2022
 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link href="data:," rel="icon" />
-    <title>Accessibility</title>
+    <title>Toronto Are.na Meetup</title>
     <meta
       name="description"
-      content="Short talks and workshops, February 29 2020 @ 56"
+      content="Short talks and workshops, June 12, 2022 @ Christie Pits"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:url" content="https://arena.meetup.to" />
@@ -43,13 +42,13 @@
     />
     <meta
       property="og:image:alt"
-      content="Short talks and workshops, February 29 2020 @ 56"
+      content="Short talks and workshops, June 12, 2022 @ Christie Pits"
     />
     <meta name="twitter:url" content="https://arena.meetup.to" />
     <meta name="twitter:title" content="Toronto Are.na Meetup" />
     <meta
       name="twitter:description"
-      content="Short talks and workshops, February 29 2020 @ 56"
+      content="Short talks and workshops, June 12, 2022 @ Christie Pits"
     />
     <meta
       name="twitter:image"
@@ -72,7 +71,6 @@
         font-feature-settings: "kern" 1;
         font-kerning: normal;
         letter-spacing: 0.02em;
-        width: 56vw;
       }
       a {
         text-decoration: none;
@@ -86,17 +84,91 @@
         height: 0.8rem;
         margin: 0 0.3rem;
       }
+      .block {
+        display: inline-block;
+        position: relative;
+        width: 19.714285714rem;
+        height: 19.714285714rem;
+        color: #17ac10;
+        border: 0.142857143rem solid #c1e9bf;
+        margin-right: 1rem;
+      }
+
+      .block:hover {
+        border: 0.142857143rem solid #17ac10;
+      }
+
+      .block-container {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+      .channel,
+      .user {
+        width: 11.428571429rem;
+      }
+      .channel {
+        font-size: 1.2rem;
+        margin-bottom: 0.342rem;
+      }
+      .user,
+      .visit {
+        font-size: 0.86rem;
+        letter-spacing: 0.02em;
+      }
+      a:hover .link {
+        display: block;
+      }
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .link-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .visit {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: calc(100% - 1rem);
+        padding: 0.5rem;
+        border-top: 2px solid #17ac10;
+      }
       p {
         margin-top: 0;
         margin-bottom: 0.15rem;
       }
+      .feed a {
+        vertical-align: middle;
+      }
+      .feed {
+        padding: 1.5rem 0;
+      }
       a {
         color: inherit;
-      }
-      .unicode {
-        font-family: monospace;
-        font-size: 0.56rem;
-        vertical-align: text-top;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -110,17 +182,33 @@
       }
 
       @media (max-width: 800px) {
+        .block {
+          height: 13rem;
+          width: 13rem;
+        }
       }
       @media (max-width: 600px) {
-        body {
-          width: unset;
+        .block-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .feed a:first-child {
+          margin-bottom: 1rem;
+        }
+        .block {
+          position: relative;
+          margin-right: 0;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
         }
       }
     </style>
   </head>
   <body>
     <p>
-      <a href="./" rel="noopener noreferrer"
+      <a href="https://are.na/toronto" target="_blank" rel="noopener noreferrer"
         >Toronto Are.na
         <svg viewBox="0 0 17 10" fill="none">
           <path
@@ -133,28 +221,76 @@
     </p>
     <p>Short talks and workshops</p>
     <br />
-    <p>Accessibility</p>
+    <p>June 12 2022, 2pm–6pm-ish</p>
     <br />
     <p>
-      Unfortunately, our space is not accessible for our friends with mobility
-      disabilities at this time :(<br />
-      <br />
-      There are 3 obstacles to mobility:<br />
-      1 — Two steps up from sidewalk to building entrance<br />
-      2 — One step up through building entrance into building<br />
-      3 — 24 steps (winding ccw three-quarter-turn set of stairs of uneven
-      dimensions) up from building entranceway up to second floor<br />
-      <br />
-      We are happy to accommodate however we can — If you have special
-      accessibility needs, or questions about the space, please email
       <a
-        href="mailto:mackenzie@4us4others.com,timur@56.digital?subject=Accessibility+@+Toronto+Are.na+Meetup"
+        href="https://goo.gl/maps/H6SJVLMGvh72bGhMA"
         target="_blank"
         rel="noopener noreferrer"
-        >Mackenzie <span class="unicode">📧</span> or Timur
-        <span class="unicode">📧</span></a
+      >
+        <br />
+        Christie Pits</a
       >
     </p>
-    <br />
+    <div class="feed">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.are.na/toronto/open-call-for-speakers-workshops"
+        class="block"
+        id="open"
+      >
+        <div class="link" id="openl">
+          <div class="visit">
+            <center>Visit →</center>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-content">
+            <div class="user">
+              <center><br /></center>
+            </div>
+            <div class="channel">
+              <center>June 2022 Meetup Planning</center>
+            </div>
+            <div class="user">
+              <center>by Toronto</center>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.are.na/toronto/rsvp-2022"
+        class="block"
+        id="rsvp"
+      >
+        <div class="link" id="rsvpl">
+          <div class="visit">
+            <center>Visit →</center>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-content">
+            <div class="user">
+              <center><br /></center>
+            </div>
+            <div class="channel">
+              <center>RSVP</center>
+            </div>
+            <div class="user">
+              <center>by Toronto</center>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- <p>
+      <a href="/ac">* Accessibility</a>,
+      <a href="/ta">* Territorial Acknowledgment</a>,
+      <a href="/coc">* Code of Conduct</a>
+    </p> -->
   </body>
 </html>
