@@ -1,0 +1,324 @@
+<!--
+  +––––––––––––––––––––––––––––––––––––––––––––+
+  |                                            |
+  |  June 26, 2022                             |
+  |                                            |
+  |  Location:                                 |
+  |  Christie Pits Park                        |
+  |                                            |
+  |           +––––––––––––––––––––+           |
+  |           |                    |           |
+  |           |     Connect ->     |           |
+  |           |                    |           |
+  |           +––––––––––––––––––––+           |
+  |                                            |
+  |                                            |
+  |                                            |
+  |  Meetup Journey Photo Channel              |
+  |  Collage/Microsite                         |
+  |                                            |
+  |                                            |
+  +––––––––––––––––––––––––––––––––––––––––––––+
+             Toronto Are.na Meetup
+                 June 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="data:," rel="icon" />
+    <title>Toronto Are.na Meetup</title>
+    <meta
+      name="description"
+      content="Park picnic and journey channel, June 26, 2022 @ Christie Pits Park"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:url" content="https://arena.meetup.to" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Toronto Are.na Meetup" />
+    <meta
+      property="og:image"
+      content="https://arena.meetup.to/static/arena.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Park picnic and journey channel, June 26, 2022 @ Christie Pits Park"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://arena.meetup.to" />
+    <meta name="twitter:title" content="Toronto Are.na Meetup" />
+    <meta
+      name="twitter:description"
+      content="Park picnic and journey channel, June 26, 2022 @ Christie Pits Park"
+    />
+    <meta
+      name="twitter:image"
+      content="https://arena.meetup.to/static/arena.jpg"
+    />
+    <meta
+      property="twitter:image:alt"
+      content="Park picnic and journey channel, June 26, 2022 @ Christie Pits Park"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        -moz-font-feature-settings: "kern" 1;
+        -ms-font-feature-settings: "kern" 1;
+        -o-font-feature-settings: "kern" 1;
+        -webkit-font-feature-settings: "kern" 1;
+        font-feature-settings: "kern" 1;
+        font-kerning: normal;
+        letter-spacing: 0.02em;
+      }
+      a {
+        text-decoration: none;
+      }
+      html {
+        font-size: 17px;
+        padding: 1.11rem;
+      }
+      svg {
+        display: inline-block;
+        height: 0.8rem;
+        margin: 0 0.3rem;
+      }
+      .block {
+        display: inline-block;
+        position: relative;
+        width: 19.714285714rem;
+        height: 19.714285714rem;
+        color: #17ac10;
+        border: 0.142857143rem solid #c1e9bf;
+        margin-right: 1rem;
+      }
+
+      .block:hover {
+        border: 0.142857143rem solid #17ac10;
+      }
+
+      .block-container {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+      .channel,
+      .user {
+        width: 11.428571429rem;
+      }
+      .channel {
+        font-size: 1.2rem;
+        margin-bottom: 0.342rem;
+      }
+      .user,
+      .visit {
+        font-size: 0.86rem;
+        letter-spacing: 0.02em;
+      }
+      a:hover .link {
+        display: block;
+      }
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .link-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .visit {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: calc(100% - 1rem);
+        padding: 0.5rem;
+        border-top: 2px solid #17ac10;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0.15rem;
+      }
+      .feed a {
+        vertical-align: middle;
+      }
+      .feed {
+        padding: 1.5rem 0;
+      }
+      a {
+        color: inherit;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #111;
+          color: #fff;
+        }
+        svg path {
+          fill: #fff;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .block {
+          height: 13rem;
+          width: 13rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .block-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .feed a:first-child {
+          margin-bottom: 1rem;
+        }
+        .block {
+          position: relative;
+          margin-right: 0;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="https://are.na/toronto" target="_blank" rel="noopener noreferrer"
+        >Toronto Are.na
+        <svg viewBox="0 0 17 10" fill="none">
+          <path
+            d="M16.836 7.007l-2.357-1.84c-.144-.113-.144-.298 0-.41l2.357-1.841c.145-.113.205-.303.134-.423-.07-.119-.268-.162-.438-.094l-2.803 1.11c-.17.068-.33-.025-.356-.206L12.95.329C12.925.148 12.79 0 12.647 0c-.141 0-.278.148-.303.329l-.422 2.974c-.026.18-.186.274-.356.206L8.81 2.417a.972.972 0 00-.62 0L5.433 3.51c-.17.068-.33-.025-.356-.206L4.656.329C4.63.148 4.493 0 4.352 0c-.142 0-.279.148-.304.329l-.422 2.974c-.025.18-.186.274-.356.206L.468 2.399c-.17-.068-.368-.025-.439.094-.07.12-.01.31.134.423l2.357 1.84c.144.113.144.298 0 .41L.163 7.007c-.145.113-.205.315-.134.448.07.134.268.188.438.12l2.777-1.109c.171-.068.33.024.354.205l.4 3c.025.181.183.329.353.329.17 0 .329-.148.353-.329l.401-3c.024-.18.183-.273.353-.205l2.732 1.09c.17.068.449.068.619 0l2.731-1.09c.17-.068.33.024.353.205l.402 3c.024.181.182.329.352.329.17 0 .328-.148.352-.329l.402-3c.024-.18.183-.273.353-.205l2.778 1.109c.17.068.367.014.438-.12.07-.133.01-.335-.134-.447zM10.84 5.19L8.764 6.778a.46.46 0 01-.528 0L6.16 5.19c-.146-.112-.147-.295-.003-.408l2.08-1.628a.448.448 0 01.525 0l2.08 1.628c.144.113.143.296-.003.408z"
+            fill="#000"
+          ></path>
+        </svg>
+        Meetup</a
+      >
+    </p>
+    <p>Park picnic and journey channel</p>
+    <br />
+    <p>June 26 2022, 2pm–6pm-ish</p>
+    <br />
+    <p>
+      <a
+        href="https://goo.gl/maps/RYUTXEnEVbwQSpRs8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <br />
+        Christie Pits Park</a
+      >
+    </p>
+    <div class="feed">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.are.na/toronto/rsvp-2022"
+        class="block"
+      >
+        <div class="link">
+          <div class="visit">
+            <center>Visit →</center>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-content">
+            <div class="user">
+              <center><br /></center>
+            </div>
+            <div class="channel">
+              <center>RSVP</center>
+            </div>
+            <div class="user">
+              <center>by Toronto</center>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.are.na/toronto/meetup-journey-photos"
+        class="block"
+      >
+        <div class="link">
+          <div class="visit">
+            <center>Visit →</center>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-content">
+            <div class="user">
+              <center><br /></center>
+            </div>
+            <div class="channel">
+              <center>Meetup Journey Photos</center>
+            </div>
+            <div class="user">
+              <center>by Toronto</center>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.are.na/toronto/june-2022-meetup-planning"
+        class="block"
+      >
+        <div class="link">
+          <div class="visit">
+            <center>Visit →</center>
+          </div>
+        </div>
+        <div class="block-container">
+          <div class="block-content">
+            <div class="user">
+              <center><br /></center>
+            </div>
+            <div class="channel">
+              <center>June 2022 Meetup Planning</center>
+            </div>
+            <div class="user">
+              <center>by Toronto</center>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <p>
+      <a href="/ac">* Accessibility</a>,
+      <a href="/ta">* Territorial Acknowledgment</a>,
+      <a href="/coc">* Code of Conduct</a>
+    </p>
+  </body>
+</html>
